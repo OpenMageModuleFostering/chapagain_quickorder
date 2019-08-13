@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<block type="quickorder/quickorder" name="quickorder.sidebar" before="-" template="chapagain_quickorder/block_sidebar.phtml"/>
+		<reference name="left">		
+			<action method="append" ifconfig="catalog/chapagain_quickorder/show_in_left_sidebar">
+				<block>quickorder.sidebar</block>
+			</action>
+        </reference>        
+        <reference name="right">
+			<action method="append" ifconfig="catalog/chapagain_quickorder/show_in_right_sidebar">	
+				<block>quickorder.sidebar</block>
+			</action>	
+        </reference>
+    </default>
+        
+    <checkout_cart_index>
+		<block type="quickorder/quickorder" name="checkout.cart.extra" template="chapagain_quickorder/block_cart.phtml"/>
+		<reference name="content">			
+			<reference name="checkout.cart">				
+				<!--<block type="quickorder/quickorder" name="checkout.cart.extra" template="chapagain_quickorder/block_cart.phtml"/>-->
+				<action method="append" ifconfig="catalog/chapagain_quickorder/show_in_cart">
+				<block>checkout.cart.extra</block>
+			</action>
+			</reference>
+		</reference>
+	</checkout_cart_index>
+	    
+</layout> 

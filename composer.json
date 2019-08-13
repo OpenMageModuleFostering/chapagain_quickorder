@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Chapagain_QuickOrder",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Quick Order - Directly add products to shopping cart by product SKU",
+    "authors": [
+    {
+        "name": "Mukesh Chapagain",
+        "email": "mukesh.chapagain@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

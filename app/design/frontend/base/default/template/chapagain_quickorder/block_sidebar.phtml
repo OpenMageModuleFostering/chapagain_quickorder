@@ -1,0 +1,25 @@
+
+<div class="block block-subscribe">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Quick Order') ?></span></strong>
+    </div>
+    <form action="<?php echo $this->getUrl('quickorder/checkout_cart/add') ?>" method="post" id="quickorder-form-sidebar">
+        <div class="block-content">            
+            <div class="input-box">
+                <label><?php echo $this->__('SKU') ?></label> <input type="text" class="input-text" id="sku" name="sku"/>
+                <label><?php echo $this->__('Qty') ?></label><input type="text" class="input-text" id="qty" name="qty" value="1" style="width:30px"/>
+            </div>            
+            <div class="actions">
+                <button type="submit" title="<?php echo $this->__('Add to Cart') ?>" class="button" onclick="submitQuickOrderFromSidebar()"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var quickOrderFromSidebar = new VarienForm('quickorder-form-sidebar');
+		function submitQuickOrderFromSidebar() {
+			quickOrderFromSidebar.form.submit();
+		}
+    //]]>
+    </script>
+</div>

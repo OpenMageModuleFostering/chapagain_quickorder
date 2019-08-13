@@ -1,0 +1,30 @@
+
+<?php //if($this->helper('quickorder')->getShowInCart()): ?>
+
+<form id="quickorder-form-cart" action="<?php echo $this->getUrl('quickorder/checkout_cart/add') ?>" method="post">
+    <div class="discount">
+        <h2><?php echo $this->__('Quick Order') ?></h2>
+        <div class="block-content">
+            <label><?php echo $this->__('Enter SKU of Product') ?></label>            
+            <div class="input-box">
+                <?php echo $this->__('SKU')?>: <input class="input-text" id="sku" name="sku"  style="width:58%"/> &nbsp;
+                <?php echo $this->__('Qty')?>: <input class="input-text" id="qty" name="qty" value="1" style="width:10%"/>
+            </div>
+            <div class="buttons-set">
+                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button" onclick="submitQuickOrderFromCart()" value="<?php echo $this->__('Add to Cart') ?>"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>                
+            </div>
+            
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var quickOrderFromCart = new VarienForm('quickorder-form-cart');
+
+function submitQuickOrderFromCart() {
+	quickOrderFromCart.form.submit();
+}
+//]]>
+</script>
+
+<?php //endif; ?>
