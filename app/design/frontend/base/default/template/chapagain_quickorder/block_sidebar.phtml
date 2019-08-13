@@ -6,8 +6,8 @@
     <form action="<?php echo $this->getUrl('quickorder/checkout_cart/add') ?>" method="post" id="quickorder-form-sidebar">
         <div class="block-content">            
             <div class="input-box">
-                <label><?php echo $this->__('SKU') ?></label> <input type="text" class="input-text" id="sku" name="sku"/>
-                <label><?php echo $this->__('Qty') ?></label><input type="text" class="input-text" id="qty" name="qty" value="1" style="width:30px"/>
+                <label><?php echo $this->__('SKU') ?></label> <input type="text" class="input-text" id="sku" name="sku" style="width:85%"/>                
+                <label><?php echo $this->__('Qty') ?></label> &nbsp;<input type="text" class="input-text" id="qty" name="qty" value="1" style="width:25%"/>
             </div>            
             <div class="actions">
                 <button type="submit" title="<?php echo $this->__('Add to Cart') ?>" class="button" onclick="submitQuickOrderFromSidebar()"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>

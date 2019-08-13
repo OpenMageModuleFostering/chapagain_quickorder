@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
-    "description": "Quick Order - Directly add products to shopping cart by product SKU",
+    "description": "This extension allows customers to directly add products to shopping cart using product SKU.",
     "authors": [
     {
         "name": "Mukesh Chapagain",

@@ -1,5 +1,5 @@
 
-<?php //if($this->helper('quickorder')->getShowInCart()): ?>
+<?php if($this->helper('quickorder')->getShowInCart()): ?>
 
 <form id="quickorder-form-cart" action="<?php echo $this->getUrl('quickorder/checkout_cart/add') ?>" method="post">
     <div class="discount">
@@ -27,4 +27,6 @@ function submitQuickOrderFromCart() {
 //]]>
 </script>
 
-<?php //endif; ?>
+<?php endif; ?>
+
+<?php echo $this->getChildHtml('child.coupon'); ?>
